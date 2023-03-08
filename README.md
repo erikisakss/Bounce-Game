@@ -1,4 +1,7 @@
 ### Bounce!
+Erik Isaksson
+ein22002
+
 
 In order to practice concept of inheritance, interfaces and abstract classes, we are going to create a simple graphical application that only consists of circles, lines and boxes. The idea is to have several moving balls (drawn as simple circles) and several stationary boxes that can affect the moving balls.
 
