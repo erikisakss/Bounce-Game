@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bounce
+{
+    public class YellowLine : Line
+    {
+
+        public YellowLine(int x, int y, int xd, int yd)
+        {
+            base.PositionA = new PointF(x, y);
+            base.PositionB = new PointF(xd, yd);
+            base.pen = new Pen(Color.Yellow, 5);
+        }
+
+        public override void BounceBack(Ball ball)
+        {
+            ball.SetSpeed(new PointF(ball.GetSpeed().X * -1, ball.GetSpeed().Y));
+        }
+    }
+}

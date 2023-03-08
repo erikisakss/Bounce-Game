@@ -5,7 +5,7 @@ namespace Bounce
 {
 	public class Ball
 	{
-	    Pen Pen = new Pen(Color.Black);
+	    Pen Pen = new Pen(Color.White);
 
 		PointF Position;
 		PointF Speed;
@@ -37,5 +37,36 @@ namespace Bounce
 			Position.Y += Speed.Y;
 		}
 
-	}
+        public PointF GetPos()
+		{
+            return Position;
+        }
+
+        public float GetRadius()
+		{
+            return Radius;
+            
+        }
+
+		public PointF GetSpeed()
+		{
+			return Speed;
+		}
+
+		public void SetSpeed(PointF newSpeed)
+		{
+			Speed = newSpeed;
+		}
+
+
+
+
+
+
+
+    }
+
+       
+
+    
 }

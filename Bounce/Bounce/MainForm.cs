@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using System.Drawing;
 
 namespace Bounce
 {
@@ -9,9 +9,12 @@ namespace Bounce
 		public MainForm() : base()
 		{
 			Text = "Bounce!";
-			Width = 800;
+            BackColor = Color.Black;
+            Width = 800;
 			Height = 600;
 			DoubleBuffered = true;
 		}
-	}
+
+     
+    }
 }
