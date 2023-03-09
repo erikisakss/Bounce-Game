@@ -25,10 +25,10 @@ namespace Bounce
             Obstacles.Add(new RedObstacle(600, 150, 50, 100));
 			Obstacles.Add(new BlueObstacle(400, 50, 100, 100));
             Obstacles.Add(new BlueObstacle(500, 300, 100, 100));
-			Obstacles.Add(new YellowLine(750, 600, 750, 0));
+			Obstacles.Add(new YellowLine(750, 150, 750, 600));
             Obstacles.Add(new YellowLine(25, 0, 25, 600));
-           // Obstacles.Add(new GreenLine(0, 25, 800, 25));
-            //Obstacles.Add(new GreenLine(275, 550, 600, 550));
+            Obstacles.Add(new GreenLine(0, 25, 800, 25));
+            Obstacles.Add(new GreenLine(275, 550, 600, 550));
 
 
 

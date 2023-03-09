@@ -20,26 +20,20 @@ namespace Bounce
         
         public void IsHit(Ball ball)
         {
-            if (Distance(PositionA, PositionB, ball.GetPos()) < 3.5f)
+            
+            var Rect = new RectangleF(PositionA.X, PositionA.Y, PositionB.X - PositionA.X, PositionB.Y - PositionA.Y);
+            var BallRect = new RectangleF(ball.GetPos().X - ball.GetRadius(), ball.GetPos().Y - ball.GetRadius(), ball.GetRadius() * 2, ball.GetRadius() * 2);
+            if (Rect.IntersectsWith(BallRect))
             {
                 BounceBack(ball);
-
             }
-            
-            
+
+
         }
 
 
         public abstract void BounceBack(Ball ball);
 
-        public double Distance(PointF a, PointF b, PointF c)
-        {
-            double distance = Math.Sqrt(Math.Pow(b.X - a.X, 2) + Math.Pow(b.Y - a.Y, 2));
-            double u = ((c.X - a.X) * (b.X - a.X) + (c.Y - a.Y) * (b.Y - a.Y)) / Math.Pow(distance, 2);
-            PointF intersection = new PointF((float)(a.X + u * (b.X - a.X)), (float)(a.Y + u * (b.Y - a.Y)));
-            distance = Math.Sqrt(Math.Pow(c.X - intersection.X, 2) + Math.Pow(c.Y - intersection.Y, 2));
-            return distance;
-
-        }
+        
     }
 }

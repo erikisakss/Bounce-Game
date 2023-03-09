@@ -22,7 +22,7 @@ namespace Bounce
             if (ball.GetSpeed().X < 8 && ball.GetSpeed().Y < 8)
             {
                 
-                ball.SetSpeed(new PointF(ball.GetSpeed().X * 1.04f, ball.GetSpeed().Y * 1.04f));
+                ball.SetSpeed(new PointF(ball.GetSpeed().X * 1.05f, ball.GetSpeed().Y * 1.05f));
             }
             
         }
